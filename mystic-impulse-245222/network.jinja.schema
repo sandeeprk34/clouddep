@@ -1,0 +1,5 @@
+info: 
+  title: Network Template
+  
+imports: 
+- path: ../templates/resourecs/network.jinja

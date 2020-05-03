@@ -1,1 +1,11 @@
-
+resources:
+- name: {{ env["name"] }}
+  type: compute.v1.network
+  properties:
+  {% if properties["IPv4Range"] %}
+    IPv4Range: {{ properties["IPv4Range"] }}
+  {% endif %}
+  {% if properties["autoCreateSubnetworks"] is defined %}
+    autoCreateSubnetworks: {{ properties["autoCreateSubnetworks"] }}
+  {% endif %}
+    description: {{ properties["description"] }}
